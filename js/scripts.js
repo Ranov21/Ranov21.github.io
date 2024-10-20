@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', event => {
             target: '#sideNav',
             rootMargin: '0px 0px -40%',
         });
-    };
+    }
 
     // Collapse responsive navbar when toggler is visible
     const navbarToggler = document.body.querySelector('.navbar-toggler');
@@ -30,5 +30,21 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     });
+
+    // Contact Form Submission
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Optionally, you can validate the form fields here
+
+            // Show the success alert
+            alert('Your message has been sent successfully!');
+
+            // Reset the form fields after submission (optional)
+            contactForm.reset();
+        });
+    }
 
 });
